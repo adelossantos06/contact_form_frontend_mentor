@@ -1,30 +1,32 @@
 import React from "react";
-import { Formik } from "formik";
+import { Formik, Field, Form } from "formik";
 
 
 function App() {
-    const initialValues = {
-        first_name: "",
-        last_name: "",
-        email: "",
-        query_type: "",
-        message: "",
-    }
+
 
 
     return (
         <div>
             <h1>Contact Us</h1>
             <Formik
-                initialValues={initialValues}
+                initialValues={{
+                    first_name: "",
+                    last_name: "",
+                    email: "",
+                    query_type: "",
+                    message: "",
+                }}
+                onSubmit={(values) => {
+                    console.log("form submitted")
+                }}
             >
-                {() => (
-                    <div>
-                        <label>First Name:</label>
-                        <Field type="text" id="name" first_name="first_name" />
-                    </div>
-                )}
+                <Form>
+                    <label>First Name</label>
+                    <Field type="text" ></Field>
+                </Form>
             </Formik>
+
         </div>
     );
 }
