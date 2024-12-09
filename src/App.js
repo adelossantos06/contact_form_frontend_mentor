@@ -1,33 +1,27 @@
 import React from "react";
 import { Formik, Field, Form } from "formik";
 
+// Users should be able to:
+
+// - Complete the form and see a success toast message upon successful submission
+// - Receive form validation messages if:
+//   - A required field has been missed
+//   - The email address is not formatted correctly
+// - Complete the form only using their keyboard
+// - Have inputs, error messages, and the success message announced on their screen reader
+// - View the optimal layout for the interface depending on their device's screen size
+// - See hover and focus states for all interactive elements on the page
 
 function App() {
-
-
-
     return (
         <div>
             <h1>Contact Us</h1>
             <Formik
-                initialValues={{
-                    first_name: "",
-                    last_name: "",
-                    email: "",
-                    query_type: "",
-                    message: "",
-                }}
-                onSubmit={(values) => {
-                    console.log("form submitted")
-                }}
-            >
-                <Form>
-                    <label>First Name</label>
-                    <Field type="text" ></Field>
-                </Form>
-            </Formik>
 
+            >
+
+            </Formik>
         </div>
-    );
+    )
 }
 export default App;
