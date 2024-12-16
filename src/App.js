@@ -74,6 +74,40 @@ function App() {
                             />
                             <ErrorMessage name="email" component="div" className="error" />
                         </div>
+                        <div>
+                            <label htmlFor="query_type" >Query Type</label>
+                            <label>
+                                <Field
+                                    id="query_type"
+                                    name="query_type"
+                                    type="radio"
+                                />
+                                General Enquiry
+                            </label>
+                            <label>
+                                <Field
+                                    id="query_type"
+                                    name="query_type"
+                                    type="radio"
+                                />
+                                Support Request
+                            </label>
+
+                            <ErrorMessage name="query_type" component="div" className="error" />
+                        </div>
+                        <div>
+                            <label htmlFor="email" >Message</label>
+                            <Field
+                                as="textarea"
+                                id="message"
+                                name="message"
+                                rows="3"
+                            />
+                            <ErrorMessage name="message" component="div" className="error" />
+                        </div>
+                        <button type="submit">
+                            Submit
+                        </button>
                     </Form>
                 )}
             </Formik>
